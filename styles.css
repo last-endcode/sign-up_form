@@ -130,3 +130,133 @@ p {
 Sign up Form
 ===============
 */
+
+/* hilangkan sections services trlbih dahulu */
+.services {
+  display: none;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  background: var(--clr-white);
+  padding: 2.5rem;
+  /* lebarkan dgn width, max-width */
+  width: 90vw;
+  max-width: var(--max-width);
+  border-radius: var(--radius);
+  box-shadow: var(--dark-shadow);
+}
+
+.form h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.form-control {
+  margin-bottom: 2rem;
+}
+
+.form-control label {
+  display: block;
+  text-transform: capitalize;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-input {
+  width: 100%;
+  border: 2px solid #ddd;
+  border-radius: var(--radius);
+  padding: 1.2rem;
+  color: var(--clr-grey-1);
+  font-size: 1rem;
+}
+
+.form-input::placeholder {
+  text-transform: capitalize;
+  color: var(--clr-grey-5);
+}
+
+/* modified only checkbox */
+input[type='checkbox'] {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.update p {
+  text-transform: capitalize;
+  color: var(--clr-grey-5);
+  font-size: 1rem;
+  /* krna posisi align-items center di grid 
+  agar sejajar */
+  margin-bottom: 0;
+}
+
+.update {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  column-gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  background: var(--ui-clr-primary);
+  border-color: transparent;
+  border-radius: var(--radius);
+  color: var(--clr-white);
+  padding: 1.25rem 0;
+  text-transform: capitalize;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 992px) {
+  .services {
+    display: block;
+    /* buat ruang smua t/b l/r krna tulisan masih di ujung kri .services */
+    padding: 4rem;
+    background: var(--ui-clr-primary);
+    color: var(--clr-white);
+    border-radius: var(--radius);
+    /* for height background services */
+    min-height: 785px;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    column-gap: 3rem;
+  }
+
+  .service {
+    max-width: 250px;
+    /* beri jarak antar service */
+    margin-bottom: 2.5rem;
+  }
+
+  /* icon */
+  .icon {
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    margin-bottom: 1rem;
+  }
+  .service h4 {
+    font-weight: 500;
+  }
+}
